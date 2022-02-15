@@ -51,6 +51,9 @@ a, a:hover {
   border-radius: 50%;
 }
 
+#verified {
+  fill: var(--twitter-blue);
+}
 #twitter-icon:hover {
   background-color: var(--twitter-blue-transparent);
 }
@@ -125,6 +128,7 @@ a, a:hover {
   border-radius: 50%;
 }
 .feed {
+  max-width: 600px;
   border-left: 1px solid var(--grey-transparent);
   border-right: 1px solid var(--grey-transparent);
 }
@@ -145,13 +149,26 @@ a, a:hover {
   display: flex;
   gap: 0.6rem;
 }
-.tweet img {
+#tweet-profile-img {
   border-radius: 50%;
+}
+.tweet-link {
+  border-radius: 15px;
+}
+.tweet-link img {
+  border-radius: 15px 15px 0 0;
+  width: clamp(200px, 100%, 500px);
+}
+.tweet-link-text {
+  border: 1px solid var(--grey-transparent);
+  padding: 0.5rem;
+  border-radius: 15px;
 }
 .toolbar {
   display: flex;
   justify-content: space-between;
   width: 80%;
+  margin-top: 0.4rem;
 }
 .sidebar {
   position: sticky;

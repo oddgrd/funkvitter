@@ -10,7 +10,11 @@
 :root {
   --twitter-blue: #1d9bf0;
   --twitter-blue-dark: #177fc4;
-  --twitter-blue-transparent: rgba(29, 155, 240, 0.4);
+  --twitter-heart: #f91880;
+  --twitter-heart-transparent: rgba(249, 24, 128, 0.2);
+  --twitter-retweet: #00ba7c;
+  --twitter-retweet-transparent: rgba(0, 186, 124, 0.2);
+  --twitter-blue-transparent: rgba(29, 155, 240, 0.2);
   --grey: #536471;
   --grey-transparent: rgba(185, 202, 211, 0.4);
 }
@@ -30,6 +34,10 @@ a:hover {
 
 /* Utils */
 
+.btn:focus {
+  box-shadow: none;
+}
+
 .circle {
   border-radius: 50%;
 }
@@ -38,10 +46,32 @@ a:hover {
   color: var(--grey);
 }
 
+.grey-fill {
+  fill: var(--grey);
+}
+
 .verified {
   fill: var(--twitter-blue);
 }
 
+.dropdown-button {
+  color: var(--grey);
+  border-radius: 50%;
+  padding: 0.5rem;
+  z-index: 10;
+}
+
+.dropdown-button:hover {
+  background-color: var(--twitter-blue-transparent);
+}
+
+.dropdown-item {
+  padding: 0.8rem;
+}
+
+.dropdown-item svg {
+  margin-right: 0.3rem;
+}
 /* Left side Navbar */
 
 .navbar {
@@ -252,10 +282,48 @@ a:hover {
 .toolbar {
   display: flex;
   justify-content: space-between;
-  width: 80%;
+  width: 100%;
   margin-top: 0.4rem;
 }
 
+.reply,
+.retweet,
+.heart {
+  border-radius: 50%;
+  padding: 0.5rem;
+  color: var(--grey);
+  fill:  var(--grey);
+}
+
+.reply:hover {
+  fill: var(--twitter-blue);
+  color: var(--twitter-blue);
+  background-color: var(--twitter-blue-transparent);
+}
+
+.retweet:hover {
+  fill: var(--twitter-retweet);
+  color: var(--twitter-retweet);
+  background-color: var(--twitter-retweet-transparent);
+}
+
+.heart:hover {
+  fill: var(--twitter-heart);
+  color: var(--twitter-heart);
+  background-color: var(--twitter-heart-transparent);
+}
+
+.hearted {
+  border-radius: 50%;
+  padding: 0.5rem;
+  fill: var(--twitter-heart);
+  color: var(--twitter-heart);
+}
+.hearted:hover {
+  fill: var(--twitter-heart);
+  color: var(--twitter-heart);
+  background-color: var(--twitter-heart-transparent);
+} 
 /* Right side Sidebar */
 
 .sidebar {

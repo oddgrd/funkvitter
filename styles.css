@@ -72,6 +72,10 @@ a:hover {
 .dropdown-item svg {
   margin-right: 0.3rem;
 }
+
+.at {
+  color: var(--twitter-blue);
+}
 /* Left side Navbar */
 
 .navbar {
